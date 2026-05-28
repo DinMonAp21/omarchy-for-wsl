@@ -11,3 +11,6 @@ command = "bat --plain --color=always --language=bash ~/.config/run/{}"
 [actions.execute]
 command = "~/.config/run/{}"
 mode = "execute"
+
+[keybindings]
+enter = "actions:execute"

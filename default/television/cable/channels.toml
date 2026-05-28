@@ -11,3 +11,6 @@ command = "echo 'Switch to channel: {}'"
 [actions.execute]
 command = "tv {}"
 mode = "execute"
+
+[keybindings]
+enter = "actions:execute"
