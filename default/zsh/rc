@@ -1,0 +1,17 @@
+source ~/.local/share/omarchy/default/zsh/shell
+source ~/.local/share/omarchy/default/zsh/aliases
+source ~/.local/share/omarchy/default/zsh/functions
+source ~/.local/share/omarchy/default/zsh/prompt
+source ~/.local/share/omarchy/default/zsh/init
+source ~/.local/share/omarchy/default/zsh/envs
+
+# Auto-launch tmux for interactive logins (skip if already in tmux or inside VSCode)
+if [[ -z "$TMUX" && $- == *i* && -z "$VSCODE_INJECTION" && "$TERM_PROGRAM" != "vscode" ]]; then
+  if command -v tmux &>/dev/null; then
+    if tmux has-session -t main 2>/dev/null; then
+      exec tmux attach -t main
+    else
+      exec tmux new -s main
+    fi
+  fi
+fi

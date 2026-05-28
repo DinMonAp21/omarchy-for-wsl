@@ -1,0 +1,13 @@
+[metadata]
+name = "channels"
+description = "Pick a television channel"
+
+[source]
+command = "tv list-channels"
+
+[preview]
+command = "echo 'Switch to channel: {}'"
+
+[actions.execute]
+command = "tv {}"
+mode = "execute"

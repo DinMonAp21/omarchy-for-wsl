@@ -1,0 +1,19 @@
+[manager]
+cwd = { fg = "cyan" }
+
+hovered         = { fg = "black", bg = "white" }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "yellow", italic = true }
+find_position = { fg = "magenta", bg = "reset", italic = true }
+
+marker_selected = { fg = "lightgreen", bg = "lightgreen" }
+marker_copied   = { fg = "lightyellow", bg = "lightyellow" }
+marker_cut      = { fg = "lightred", bg = "lightred" }
+
+tab_active   = { reversed = true }
+tab_inactive = {}
+
+[status]
+separator_open  = ""
+separator_close = ""

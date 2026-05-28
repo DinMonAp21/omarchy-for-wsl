@@ -1,0 +1,26 @@
+[manager]
+keymap = [
+  { on = "<Esc>", run = "escape",                            desc = "Exit visual mode, clear selection, or cancel search" },
+  { on = "q",     run = "quit",                              desc = "Exit the process" },
+  { on = "Q",     run = "quit --no-cwd-file",                desc = "Exit without writing cwd file" },
+
+  { on = "h",     run = "leave",                             desc = "Go back to the parent directory" },
+  { on = "j",     run = "arrow next",                        desc = "Move down" },
+  { on = "k",     run = "arrow prev",                        desc = "Move up" },
+  { on = "l",     run = "enter",                             desc = "Enter the child directory" },
+
+  { on = "g",     run = "arrow top",                         desc = "Move to top" },
+  { on = "G",     run = "arrow bot",                         desc = "Move to bottom" },
+
+  { on = "y",     run = "yank",                              desc = "Yank selected files" },
+  { on = "x",     run = "yank --cut",                        desc = "Cut selected files" },
+  { on = "p",     run = "paste",                             desc = "Paste files" },
+  { on = "d",     run = "remove --permanently",              desc = "Trash selected files" },
+
+  { on = "<C-r>", run = "rename --cursor=before_ext",        desc = "Rename" },
+
+  { on = "/",     run = "find --smart",                      desc = "Find next" },
+  { on = "?",     run = "find --previous --smart",           desc = "Find previous" },
+
+  { on = ".",     run = "hidden toggle",                     desc = "Toggle hidden" },
+]

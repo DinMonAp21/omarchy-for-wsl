@@ -1,0 +1,13 @@
+[metadata]
+name = "run"
+description = "Run a script from ~/.config/run/"
+
+[source]
+command = "find ~/.config/run -maxdepth 1 -type f -executable -printf '%f\\n' 2>/dev/null | sort"
+
+[preview]
+command = "bat --plain --color=always --language=bash ~/.config/run/{}"
+
+[actions.execute]
+command = "~/.config/run/{}"
+mode = "execute"
